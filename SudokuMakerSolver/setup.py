@@ -1,4 +1,5 @@
-import pygame, time
+import pygame
+import time
 from src.Board import Solution, chkValidity
 from src.ValueMaker import boardMake
 
@@ -33,11 +34,10 @@ class Grid:
 
             if chkValidity(self.model, val, (row, col)) and Solution(self.model):
                 return True
-            else:
-                self.cubes[row][col].set(0)
-                self.cubes[row][col].set_temp(0)
-                self.update_model()
-                return False
+            self.cubes[row][col].set(0)
+            self.cubes[row][col].set_temp(0)
+            self.update_model()
+            return False
 
     def sketch(self, val):
         row, col = self.selected
@@ -51,7 +51,8 @@ class Grid:
                 thick = 4
             else:
                 thick = 1
-            pygame.draw.line(win, (0, 0, 0), (0, i * gap), (self.width, i * gap), thick)
+            pygame.draw.line(win, (0, 0, 0), (0, i * gap),
+                             (self.width, i * gap), thick)
             pygame.draw.line(
                 win, (0, 0, 0), (i * gap, 0), (i * gap, self.height), thick
             )
@@ -85,8 +86,7 @@ class Grid:
             x = pos[0] // gap
             y = pos[1] // gap
             return (int(y), int(x))
-        else:
-            return None
+        return None
 
     def is_finished(self):
         for i in range(self.rows):
@@ -219,7 +219,7 @@ def main():
                     board.select(clicked[0], clicked[1])
                     key = None
 
-        if board.selected and key != None:
+        if board.selected and key is not None:
             board.sketch(key)
 
         redraw_window(win, board, play_time, strikes)
