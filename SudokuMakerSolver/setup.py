@@ -33,11 +33,10 @@ class Grid:
 
             if chkValidity(self.model, val, (row, col)) and Solution(self.model):
                 return True
-            else:
-                self.cubes[row][col].set(0)
-                self.cubes[row][col].set_temp(0)
-                self.update_model()
-                return False
+            self.cubes[row][col].set(0)
+            self.cubes[row][col].set_temp(0)
+            self.update_model()
+            return False
 
     def sketch(self, val):
         row, col = self.selected
@@ -85,8 +84,7 @@ class Grid:
             x = pos[0] // gap
             y = pos[1] // gap
             return (int(y), int(x))
-        else:
-            return None
+        return None
 
     def is_finished(self):
         for i in range(self.rows):

@@ -4,8 +4,7 @@ def Solution(board):
     Finder = emptyCell(board)
     if not Finder:
         return True
-    else:
-        row, col = Finder
+    row, col = Finder
 
     for i in range(1, 10):
         if chkValidity(board, i, (row, col)):
