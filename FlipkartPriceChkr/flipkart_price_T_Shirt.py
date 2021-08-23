@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-## Imports
+# Imports
 import requests
 import smtplib
 import time
@@ -87,5 +87,5 @@ def Send_Mail():
 """# Running every hour"""
 
 while(True):
- check_price()
- time.sleep(60*60)
+    check_price()
+    time.sleep(60*60)
