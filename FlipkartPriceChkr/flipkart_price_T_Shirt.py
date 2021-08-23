@@ -1,29 +1,23 @@
 # -*- coding: utf-8 -*-
-"""Flipkart_Price_Chk.ipynb
-
-Original file is located at
-    https://colab.research.google.com/drive/1Gc5jmOzuZUwxCZoy3g510fIZhsQwQTKI
 
 ## Imports
-"""
-
 import requests
 import smtplib
 import time
 import urllib
 from bs4 import BeautifulSoup
 
-"""## UserAgent and URL"""
+## UserAgent and URL
 
-Head =
+Head = 'Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0'
 
 HEADER = {'User-Agent': Head}
 #URL = str(input("Enter URL: "))
-URL =
-Price_Expecc = 300
+URL = 'https://www.flipkart.com/adidas-solid-men-round-neck-white-t-shirt/p/itmfefdzn3f7w8e7?pid=TSHFEFDNDHQT7BYA&lid=LSTTSHFEFDNDHQT7BYATVVBA7&marketplace=FLIPKART&sattr[]=color&st=color'
+Price_Expecc = 800
 
-page = requests.get("http://dl.flipkart.com/dl/xccess-8-gb-sd-card-class-10-40-mb-s-memory/p/itmf7y46supzzazc?pid=ACCF7XWNGE5ZY78V&cmpid=product.share.pp",
-                    headers='Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:89.0) Gecko/20100101 Firefox/89.0')
+page = requests.get(URL,
+                    headers=Head)
 suup = BeautifulSoup(page.content, 'html.parser')
 title = str(suup.find("span", {"class": "B_NuCI"}).get_text())[:10].strip()
 price = float(suup.find("div", {"class": "_30jeq3 _16Jk6d"}).get_text()[
@@ -92,7 +86,6 @@ def Send_Mail():
 
 """# Running every hour"""
 
-# while(True):
-# check_price()
-#    time.sleep(60*60)
-check_price()
+while(True):
+ check_price()
+ time.sleep(60*60)
