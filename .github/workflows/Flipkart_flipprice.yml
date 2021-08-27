@@ -40,4 +40,4 @@ jobs:
         app-name: 'flipprice'
         slot-name: 'production'
         package: ${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_c685694fac7449c295034b86e8b512a5 }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d53315f324c54a3b832bcfe8ab6dba33 }}
