@@ -28,6 +28,10 @@ def PosingUp():
         color=(255, 0, 255), thickness=2, circle_radius=1)
     mpDraw.draw_landmarks(Image, Results.left_hand_landmarks,
                           mpHolistic.HAND_CONNECTIONS, leftDots, leftLines)
+    # * Pose
+    poseDots= mpDraw.DrawingSpec(color=(255,255,0), thickness=1, circle_radius=1)
+    poseLines= mpDraw.DrawingSpec(color=(255,0,255), thickness=1, circle_radius=1)
+    mpDraw.draw_landmarks(Image, Results.pose_landmarks, mpHolistic.POSE_CONNECTIONS, poseDots, poseLines)
 
 Cam = cv2.VideoCapture(0)
 with mpHolistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as Holisticc:  # ? Initiate Model
