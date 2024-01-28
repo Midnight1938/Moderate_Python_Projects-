@@ -36,5 +36,5 @@ It is not very accurate but it works!
 Uses ~sklearn~ and ~matplotlib~ to extract the color pallete of an image. ~sklearn~ is used to cluster the colors and ~matplotlib~ is used to display the colors.
 
 * Into GUI w PyGame
-** [[file:/PyGam/Menger-Square/][Menger Sponge]
-This is a simple program that creates a menger sponge using the pygame module. Uses rayMarching to render the sponge.
+** [[file:/PyGam/SinePlanet/][World With Sine]
+A world built using sine waves

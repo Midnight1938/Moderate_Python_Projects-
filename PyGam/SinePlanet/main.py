@@ -5,9 +5,9 @@ import sys
 
 
 class App:
-    def __init__(self, win_size=(1920, 1080)):
+    def __init__(self, win_size=(1200, 800)):
         # opengl context
-        pg.display.set_mode(win_size, flags=pg.OPENGL | pg.DOUBLEBUF | pg.FULLSCREEN)
+        pg.display.set_mode(win_size, flags=pg.OPENGL | pg.DOUBLEBUF)
         self.ctx = mgl.create_context()
 
         # time objects
@@ -48,7 +48,7 @@ class App:
             self.render()
             self.clock.tick(0)
             fps = self.clock.get_fps()
-            pg.display.set_caption(f'{fps :.1f}')
+            pg.display.set_caption(f'{fps :.1f}') # display fps in window title
 
     def set_uniform(self, u_name, u_value):
         try:
