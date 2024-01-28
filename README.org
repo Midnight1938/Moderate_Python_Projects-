@@ -13,7 +13,7 @@ Includes relatively simple projects
 * [[file:/CLI/Doomsday_Cal/][Doomsday Clock]]
 This is a simple doomsday calculation algorithm that will tell you the day it will be for the given date
 
-** *Not to be confused with the [[img:https://commons.wikimedia.org/wiki/File:Doomsday_Clock_100_seconds_mark.png][Doomsday Clock]]
+*Not to be confused with the [[img:https://commons.wikimedia.org/wiki/File:Doomsday_Clock_100_seconds_mark.png][Doomsday Clock]]*
 
 + The program is not tested for all years and dates so problems may occur I'm not sure
 + The [[file:/CLI/Doomsday_Cal/Alternates.ipynb][jupyter Notebook]] includes the following:
