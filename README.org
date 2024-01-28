@@ -20,7 +20,7 @@ This is a simple doomsday calculation algorithm that will tell you the day it wi
   - An anchor year checker
   - Doomsday Calculation using modules
 
-** '[[file:/CLI/Doomsday_Cal/Test things.ipynb][Test Things]]' includes
+** '[[file:/CLI/Doomsday_Cal/TestThings.ipynb][Test Things]]' includes
   - Files used to make the python file itself.
   - Division of parts based on use for easy modification.
 
