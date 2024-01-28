@@ -3,25 +3,35 @@
 
 Includes relatively simple projects
 
-*** Project List:
-**** [[file:/FlipkartPriceChkr/][Flipkart Price Check]]
+* [[file:/FlipkartPriceChkr/][Flipkart Price Check]]
 + Emails a user when price fals below a specific range
 + Looks for change in the price class of the provided flipkart Link
   - If its lower than the input it activates the url shortner API and email client
     * Then emails with the heading of the Product and set price. And body contains the link and price.
 + Refer to [[file:/FlipkartPriceChkr/Flipkart_Price_Chk.ipynb][Flipkart Jupyter File]] for more explaination
 
-**** [[file:/Doomsday_Cal/][Doomsday Clock]]
-+ This is a simple doomsday calculation algorithm that will tell you the day it will be for the given date
+* [[file:/CLI/Doomsday_Cal/][Doomsday Clock]]
+This is a simple doomsday calculation algorithm that will tell you the day it will be for the given date
 
-- *Not to be confused with the Doomsday clock*
-[[img:https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2Fb%2Fb2%2FDoomsday_Clock-_2.5_minutes.svg%2F1200px-Doomsday_Clock-_2.5_minutes.svg.png&f=1&nofb=1][Doomsday Clock]]
+** *Not to be confused with the [[img:https://commons.wikimedia.org/wiki/File:Doomsday_Clock_100_seconds_mark.png][Doomsday Clock]]
 
 + The program is not tested for all years and dates so problems may occur I'm not sure
-+ The [[file:/Doomsday_Cal/Alternates.ipynb][jupyter Notebook]] includes the following:
-  * An anchor year checker
-  * Doomsday Calculation using modules
++ The [[file:/CLI/Doomsday_Cal/Alternates.ipynb][jupyter Notebook]] includes the following:
+  - An anchor year checker
+  - Doomsday Calculation using modules
 
-+ '[[file:/Doomsday_Cal/Test things.ipynb][Test Things]]' includes
+** '[[file:/CLI/Doomsday_Cal/Test things.ipynb][Test Things]]' includes
   - Files used to make the python file itself.
   - Division of parts based on use for easy modification.
+
+* [[file:/SudokuMakerSolver/][Sudoku Maker and Solver]]
+Creates new soduku puzzles and has the ability to solves them. I no longer remember doing it but it works.
+
+
+* [[file:/Imaging/][Image Processing]]
+** [[file:/Imaging/Image_Based-Recog/][Image Recognition]]
+Is able to recognize images based on the training data provided. 
+Uses the =MNIST dataset= for training and testing. And is a simple neural network that uses the backpropagation algorithm to train itself. 
+It is not very accurate but it works!
+** [[file:/Imaging/Color Analysis/][Color Pallete Extracter]]
+Uses ~sklearn~ and ~matplotlib~ to extract the color pallete of an image. ~sklearn~ is used to cluster the colors and ~matplotlib~ is used to display the colors.
