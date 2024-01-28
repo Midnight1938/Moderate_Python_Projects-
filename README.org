@@ -32,5 +32,5 @@ Creates new soduku puzzles and has the ability to solves them. I no longer remem
 Is able to recognize images based on the training data provided. 
 Uses the =MNIST dataset= for training and testing. And is a simple neural network that uses the backpropagation algorithm to train itself. 
 It is not very accurate but it works!
-** [[file:/Imaging/Colour Analysis/][Color Pallete Extracter]]
+** [[file:/Imaging/Colour_Analysis/][Color Pallete Extracter]]
 Uses ~sklearn~ and ~matplotlib~ to extract the color pallete of an image. ~sklearn~ is used to cluster the colors and ~matplotlib~ is used to display the colors.
