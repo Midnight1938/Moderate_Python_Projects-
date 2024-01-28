@@ -24,7 +24,7 @@ This is a simple doomsday calculation algorithm that will tell you the day it wi
   - Files used to make the python file itself.
   - Division of parts based on use for easy modification.
 
-* [[file:/SudokuMakerSolver/][Sudoku Maker and Solver]]
+* [[file:/PyGam/SudokuMakerSolver/][Sudoku Maker and Solver]]
 Creates new soduku puzzles and has the ability to solves them. I no longer remember doing it but it works.
 
 * [[file:/Imaging/][Image Processing]]
@@ -34,3 +34,7 @@ Uses the =MNIST dataset= for training and testing. And is a simple neural networ
 It is not very accurate but it works!
 ** [[file:/Imaging/Colour_Analysis/][Color Pallete Extracter]]
 Uses ~sklearn~ and ~matplotlib~ to extract the color pallete of an image. ~sklearn~ is used to cluster the colors and ~matplotlib~ is used to display the colors.
+
+* Into GUI w PyGame
+** [[file:/PyGam/Menger-Square/][Menger Sponge]
+This is a simple program that creates a menger sponge using the pygame module. Uses rayMarching to render the sponge.
