@@ -3,9 +3,9 @@ import moderngl as mgl
 import struct
 import sys
 
-
+# 
 class App:
-    def __init__(self, win_size=(1200, 800)):
+    def __init__(self, win_size=(1920, 1080)):
         # opengl context
         pg.display.set_mode(win_size, flags=pg.OPENGL | pg.DOUBLEBUF)
         self.ctx = mgl.create_context()
