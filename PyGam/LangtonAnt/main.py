@@ -20,18 +20,18 @@ class Ant:
         
         SIZE = self.app.CELL_SIZE
         
-        #* Coloured Circle Trail
+        # #* Coloured Circle Trail
         center = self.x * SIZE, self.y * SIZE
         if value:
-            pg.draw.circle(self.app.screen, self.color, center, SIZE)
+            pg.draw.circle(self.app.screen, self.color, center, SIZE/2)
         
         #* White rectangle Trail
-        #rect = self.x * SIZE, self.y * SIZE, SIZE -1, SIZE -1 # A rect to draw the ant
-        #if value:
+        # rect = self.x * SIZE, self.y * SIZE, SIZE -1, SIZE -1 # A rect to draw the ant
+        # if value:
         #    pg.draw.rect(self.app.screen, pg.Color('white'), rect)
-        #else:
+        # else:
         #    pg.draw.rect(self.app.screen, self.color, rect)
-        #
+        
         
         self.increment.rotate(1) if value else self.increment.rotate(-1) # rotate deque by 1. ie next element
         dx, dy = self.increment[0] # get the next element
@@ -50,16 +50,17 @@ class App:
         self.grid = [[0 for col in range(self.COLS)] for row in range(self.ROWS)] # set all grid values to 0
 
         #* Colour Grouped
-        colors1 = [(50, 30, i) for i in range(256)] # GBA Blue style 
+        # colors1 = [(50, 30, i) for i in range(256)] # GBA Blue style 
         colors2 = [(150, i, 120) for i in range(256)] # GBA Green Maroon style
-        ants1 = [Ant(self, [self.COLS // 3, self.ROWS // 2],
-                     choice(colors1)) for i in range(40)]
-        ants2 = [Ant(self, [self.COLS - self.COLS // 3, self.ROWS // 2],
-                     choice(colors2)) for i in range(40)]
-        self.ants = ants1 + ants2 # Group to display
+        # ants1 = [Ant(self, [self.COLS // 3, self.ROWS // 2],
+        #              choice(colors1)) for i in range(40)]
+        # ants2 = [Ant(self, [self.COLS - self.COLS // 3, self.ROWS // 2],
+        #              choice(colors2)) for i in range(40)]
+        # self.ants = ants1 + ants2 # Group to display
         
-#        self.ants = [Ant(self, [randrange(self.COLS), randrange(self.ROWS)], self.get_colour()) for i in range(500)] # Random Bunch
-#        self.ant = Ant(app=self, pos=[self.COLS // 2, self.ROWS // 2], colour=pg.Color('orange')) # initialize the ant, in orange colour
+        # self.ants = [Ant(self, [randrange(self.COLS), randrange(self.ROWS)], self.get_colour()) for i in range(500)] # Random Bunch
+        self.ants = [Ant(self, [randrange(self.COLS), randrange(self.ROWS)], choice(colors2)) for i in range(500)] # Random Bunch
+        self.ant = Ant(app=self, pos=[self.COLS // 2, self.ROWS // 2], colour=pg.Color('orange')) # initialize the ant, in orange colour
         
         
     @staticmethod
@@ -77,7 +78,7 @@ class App:
             self.clock.tick(60) # FPS
             # Show FPS
             fps = self.clock.get_fps()
-            pg.display.set_caption(f'{fps :.1f}')
+            pg.display.set_caption(f"Langton's Ants | FPS: {int(fps)}")
 
 
 if __name__ == "__main__":
